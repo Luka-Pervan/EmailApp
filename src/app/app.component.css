@@ -1,0 +1,54 @@
+/* Navigation link styles */
+.nav-link {
+  color: #0e0f0f; /* Primary color for links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Spacing between links */
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #c6d316; /* Darker shade on hover */
+}
+
+/* Overall app container */
+.app-container {
+  font-family: "Arial", sans-serif; /* Set a modern font */
+  color: #333; /* Text color */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Header styling */
+.app-header {
+  background-color: #007bff; /* Primary color for header */
+  color: white; /* White text in header */
+  padding: 20px; /* Inner spacing */
+  text-align: center; /* Centered text */
+}
+
+/* Main content area styling */
+.app-main {
+  flex: 1; /* Allow main area to grow */
+  padding: 20px; /* Inner spacing */
+}
+
+/* Footer styling */
+.app-footer {
+  background-color: #333; /* Dark footer */
+  color: white; /* White text in footer */
+  text-align: center; /* Centered text */
+  padding: 15px; /* Inner spacing */
+  font-size: 14px; /* Slightly smaller font */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+  .app-header h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}

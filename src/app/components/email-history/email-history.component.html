@@ -1,0 +1,29 @@
+<div class="email-history">
+  <h2>Email History</h2>
+
+  <div *ngIf="loading">Loading email history...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <table *ngIf="!loading && !error">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>CC</th>
+        <th>Subject</th>
+        <th>Importance</th>
+        <th>Date Sent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let email of emails">
+        <td>{{ email.fromEmail }}</td>
+        <td>{{ email.toEmail }}</td>
+        <td>{{ email.ccEmails }}</td>
+        <td>{{ email.subject }}</td>
+        <td>{{ email.importance }}</td>
+        <td>{{ email.dateSent | date : "dd.MM.yyyy. HH:mm" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="email-form-container">
+  <h2>Email Form</h2>
+  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+    <label for="fromEmail">From Email:</label>
+    <input id="fromEmail" formControlName="fromEmail" type="email" />
+
+    <label for="toEmail">To Email:</label>
+    <input id="toEmail" formControlName="toEmail" type="email" />
+
+    <label for="ccEmails">CC Emails:</label>
+    <input id="ccEmails" formControlName="ccEmails" type="text" />
+
+    <label for="subject">Subject:</label>
+    <input id="subject" formControlName="subject" type="text" />
+
+    <label for="content">Content:</label>
+    <textarea id="content" formControlName="content" rows="5"></textarea>
+
+    <label for="importance">Importance:</label>
+    <select id="importance" formControlName="importance">
+      <option value="Low">Low</option>
+      <option value="Normal">Normal</option>
+      <option value="High">High</option>
+    </select>
+
+    <button type="submit">Send Email</button>
+
+    <div
+      *ngIf="emailForm.invalid && (emailForm.dirty || emailForm.touched)"
+      class="error"
+    >
+      Please fill out all required fields correctly.
+    </div>
+  </form>
+</div>
