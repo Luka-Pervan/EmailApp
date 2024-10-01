@@ -12,7 +12,10 @@
         <th>CC</th>
         <th>Subject</th>
         <th>Importance</th>
-        <th>Date Sent</th>
+        <th (click)="toggleSort()" style="cursor: pointer">
+          Date Sent <span>{{ sortOrder === "asc" ? "↑" : "↓" }}</span>
+        </th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +26,11 @@
         <td>{{ email.subject }}</td>
         <td>{{ email.importance }}</td>
         <td>{{ email.dateSent | date : "dd.MM.yyyy. HH:mm" }}</td>
+        <td>
+          <button (click)="openDetails(email)" class="details-button">
+            Details
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

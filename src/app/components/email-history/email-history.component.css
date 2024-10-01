@@ -1,6 +1,6 @@
 .email-history {
   margin: 20px auto; /* Center the component */
-  max-width: 800px; /* Set a max width for the table */
+  max-width: 900px; /* Set a max width for the table */
   padding: 20px; /* Add padding around the container */
   background-color: #ffffff; /* Set a white background */
   border-radius: 8px; /* Rounded corners for the container */
@@ -16,9 +16,8 @@
 }
 
 .email-table {
-  width: 100%;
-  border-collapse: separate; /* Use separate borders for spacing */
-  border-spacing: 0 15px; /* Increased vertical spacing between rows */
+  width: 100%; /* Ensure table uses full width of the container */
+  border-collapse: collapse; /* Collapse borders for better spacing */
   font-family: "Arial", sans-serif; /* Consistent font for table */
 }
 
@@ -72,4 +71,20 @@
 /* Add some space around the header */
 .email-table th {
   padding: 25px; /* Increased padding for header */
+}
+
+/* Styles for the details button */
+.details-button {
+  padding: 8px 12px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Modern font size */
+}
+
+.details-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }

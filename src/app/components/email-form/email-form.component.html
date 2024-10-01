@@ -23,7 +23,11 @@
       <option value="High">High</option>
     </select>
 
-    <button type="submit">Send Email</button>
+    <!-- Button Container -->
+    <div class="button-container">
+      <button type="submit">Send Email</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
 
     <div
       *ngIf="emailForm.invalid && (emailForm.dirty || emailForm.touched)"

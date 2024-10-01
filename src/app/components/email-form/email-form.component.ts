@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { EmailData } from '../../models/email.model';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-email-form',
@@ -40,7 +41,8 @@ export class EmailFormComponent {
   constructor(
     private fb: FormBuilder,
     private emailService: EmailService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private dialog: MatDialog
   ) {
     this.emailForm = this.fb.group({
       fromEmail: ['', [Validators.required, Validators.email]],

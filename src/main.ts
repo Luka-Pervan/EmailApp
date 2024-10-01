@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EmailFormComponent } from './app/components/email-form/email-form.component';
 import { EmailHistoryComponent } from './app/components/email-history/email-history.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   { path: 'email-form', component: EmailFormComponent },
@@ -29,7 +31,9 @@ bootstrapApplication(AppComponent, {
         timeOut: 3000, // Auto close after 3 seconds
         closeButton: true, // Show close button
         progressBar: true, // Show progress bar
-      })
+      }),
+      MatDialogModule, // Add MatDialogModule
+      MatButtonModule // Add MatButtonModule
     ),
   ],
 }).catch((err) => console.error(err));
